@@ -2,7 +2,7 @@ import React from "react";
 // import './App.css'
 import Header from './header/Header.jsx';
 import Home from "./home/Home.jsx";
-import Classes from "./Classes/Classes.jsx";
+import Classes from "./classes/Classes.jsx";
 import Videos from "./videos/Videos.jsx";
 import About from "./about/About.jsx";
 import Contact from "./contact/Contact.jsx";
