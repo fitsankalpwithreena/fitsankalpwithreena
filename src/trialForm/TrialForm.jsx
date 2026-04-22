@@ -62,8 +62,12 @@ Preferred Language: ${formData.language}`
               <input name="name" placeholder="Your Name" onChange={handleChange} className="w-full border p-3 rounded-lg" required/>
               <input name="age" placeholder="Your Age" onChange={handleChange} className="w-full border p-3 rounded-lg" required />
               <input name="goal" placeholder="Goal" onChange={handleChange} className="w-full border p-3 rounded-lg" required />
-              <textarea name="medical" placeholder="Medical Info" onChange={handleChange} className="w-full border p-3 rounded-lg" required />
-                
+              <textarea
+                name="medical"
+                placeholder="Medical Information (if any). Please mention injuries or health conditions, or write 'None'."
+                onChange={handleChange}
+                className="w-full border p-3 rounded-lg"
+              />      
               <select
                 name="time"
                 onChange={handleChange}
@@ -71,16 +75,16 @@ Preferred Language: ${formData.language}`
               >
                 <option value="">Select Time Slot</option>
                  <optgroup label="Morning">
-                <option value="5 AM">6:00 AM</option>
-                <option value="6 AM">7:00 AM</option>
-                <option value="7 AM">8:00 AM</option>
-                <option value="7 AM">9:00 AM</option>
+                <option value="6:00 AM">6:00 AM</option>
+                <option value="7:00 AM">7:00 AM</option>
+                <option value="8:00 AM">8:00 AM</option>
+                <option value="9:00 AM">9:00 AM</option>
                 </optgroup>
                  <optgroup label="Evening">
-                <option value="5 AM">4:00 PM</option>
-                <option value="6 AM">5:00 PM</option>
-                <option value="7 AM">6:00 PM</option>
-                <option value="7 AM">7:00 PM</option>
+                <option value="4:00 PM">4:00 PM</option>
+                <option value="5:00 PM">5:00 PM</option>
+                <option value="6:00 PM">6:00 PM</option>
+                <option value="7:00 PM">7:00 PM</option>
                 </optgroup>
                 
               </select>
