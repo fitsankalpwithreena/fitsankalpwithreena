@@ -1,6 +1,6 @@
 import React,{useState,useEffect}from "react";
 import { motion } from "framer-motion";
-import { Menu, X, Search, Sun, Moon } from "lucide-react";
+import { Menu, X} from "lucide-react";
 
 export default function Header({ openTrial }) {
   const [open, setOpen] = React.useState(false);
@@ -100,7 +100,7 @@ useEffect(() => {
 
               {/* Mobile menu */}
               <button
-                className="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
+                className="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-white"
                 onClick={() => setOpen(!open)}
               >
                 {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
