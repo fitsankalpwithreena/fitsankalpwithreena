@@ -21,10 +21,32 @@ const TrialForm = forwardRef((props, ref) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   
-  const handleSubmit = (e) => {
-    e.preventDefault();
-const message = encodeURIComponent(
-  `Hi Reena, I would like to book a trial class.
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+// const message = encodeURIComponent(
+//   `Hi Reena, I would like to book a trial class.
+
+// Name: ${formData.name}
+// Age: ${formData.age}
+// Goal: ${formData.goal}
+// Medical Info: ${formData.medical}
+// Time Slot: ${formData.time}
+// Preferred Language: ${formData.language}`
+// );
+
+//     window.open(`https://wa.me/918208920622?text=${message}`, "_blank");
+
+//     setShowModal(false);
+//   };
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  const subject = encodeURIComponent("New Trial Class Enquiry");
+
+  const body = encodeURIComponent(
+`Hi Reena,
+
+I would like to book a trial class.
 
 Name: ${formData.name}
 Age: ${formData.age}
@@ -32,12 +54,12 @@ Goal: ${formData.goal}
 Medical Info: ${formData.medical}
 Time Slot: ${formData.time}
 Preferred Language: ${formData.language}`
-);
+  );
 
-    window.open(`https://wa.me/918208920622?text=${message}`, "_blank");
+  window.open(`mailto:fitsankalpwithreena@gmail.com?subject=${subject}&body=${body}`);
 
-    setShowModal(false);
-  };
+  setShowModal(false);
+};
 
   return (
     <>
