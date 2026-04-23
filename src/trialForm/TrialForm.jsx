@@ -12,7 +12,7 @@ const TrialForm = forwardRef((props, ref) => {
     time: ""
   });
 
-  // 👇 expose function to parent
+  // expose function to parent
   useImperativeHandle(ref, () => ({
     openModal: () => setShowModal(true)
   }));
@@ -60,7 +60,14 @@ Preferred Language: ${formData.language}`
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <input name="name" placeholder="Your Name" onChange={handleChange} className="w-full border p-3 rounded-lg" required/>
-              <input name="age" placeholder="Your Age" onChange={handleChange} className="w-full border p-3 rounded-lg" required />
+              <input name="age" type="text" inputMode="numeric" maxLength={3} placeholder="Your Age"
+                    onChange={(e) => {
+                  e.target.value = e.target.value.replace(/\D/g, "").slice(0, 3);
+                  handleChange(e);
+                  }}
+                  className="w-full border p-3 rounded-lg"
+              />
+  
               <input name="goal" placeholder="Goal" onChange={handleChange} className="w-full border p-3 rounded-lg" required />
               <textarea
                 name="medical"
@@ -71,7 +78,7 @@ Preferred Language: ${formData.language}`
               <select
                 name="time"
                 onChange={handleChange}
-                className="w-full border p-3 rounded-lg" required
+                className="w-full border p-3 rounded-lg cursor-pointer" required
               >
                 <option value="">Select Time Slot</option>
                  <optgroup label="Morning">
@@ -91,12 +98,11 @@ Preferred Language: ${formData.language}`
               <select
                 name="language"
                 onChange={handleChange}
-                className="w-full border p-3 rounded-lg" required
+                className="w-full border p-3 rounded-lg cursor-pointer" required
               >
                 <option value="">Preferred Language</option>
                 <option value="Hindi">Hindi</option>
                 <option value="English">English</option>
-                <option value="Both">Hindi + English (Mix)</option>
               </select>
                 <p className="text-sm text-gray-500 text-center">
                 You’ll be redirected to WhatsApp to confirm your booking 📲

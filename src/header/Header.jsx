@@ -68,7 +68,7 @@ useEffect(() => {
     <button
       key={item}
       onClick={() => scrollToSection(item)}
-      className={`relative group ${
+      className={`relative group cursor-pointer ${
         active === item
           ? "text-orange-500"
           : "text-slate-700 dark:text-slate-200"
@@ -121,7 +121,16 @@ useEffect(() => {
     {["home","about", "classes", "videos", "contact"].map((item) => (
       <button
         key={item}
-        onClick={() => scrollToSection(item)}
+        // onClick={() => {
+        //   scrollToSection(item)
+        //   // setOpen(false);
+        // }}
+  onClick={() => {
+  setOpen(false);
+  setTimeout(() => {
+    scrollToSection(item);
+  }, 300);
+}}
         className={`block w-full text-left px-2 py-2 rounded-md cursor-pointer ${
           active === item
             ? "text-orange-500 bg-orange-50 dark:bg-slate-800"
@@ -133,7 +142,11 @@ useEffect(() => {
     ))}
 
   <button
-    onClick={openTrial}
+    // onClick={openTrial}
+    onClick={() => {
+    openTrial();
+    setOpen(false); // close menu
+  }}
     className="block w-full text-center mt-3 px-4 py-2 rounded-2xl bg-orange-700 text-white hover:bg-orange-500 cursor-pointer"
   >
     Book Free Trial

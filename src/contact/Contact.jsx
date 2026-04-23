@@ -3,9 +3,7 @@ import React from "react";
  export default function Contact() {
   return (
 <section id="contact" className="py-30 bg-blue-50 my-20">
-        
-          
-  <div className="max-w-4xl mx-auto text-center px-6">
+         <div className="max-w-4xl mx-auto text-center px-6">
     
     <h3 className="text-4xl font-bold mb-8">Get in Touch</h3>
 
