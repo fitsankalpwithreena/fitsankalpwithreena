@@ -5,6 +5,7 @@ const TrialForm = forwardRef((props, ref) => {
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
+    phone:"",
     age: "",
     goal: "",
     medical: "",
@@ -32,6 +33,7 @@ const handleSubmit = (e) => {
 I would like to book a trial class.
 
 Name: ${formData.name}
+Mobile no: ${formData.phone}
 Age: ${formData.age}
 Goal: ${formData.goal}
 Medical Info: ${formData.medical}
