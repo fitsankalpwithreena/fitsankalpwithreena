@@ -21,27 +21,10 @@ const TrialForm = forwardRef((props, ref) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-// const message = encodeURIComponent(
-//   `Hi Reena, I would like to book a trial class.
-
-// Name: ${formData.name}
-// Age: ${formData.age}
-// Goal: ${formData.goal}
-// Medical Info: ${formData.medical}
-// Time Slot: ${formData.time}
-// Preferred Language: ${formData.language}`
-// );
-
-//     window.open(`https://wa.me/918208920622?text=${message}`, "_blank");
-
-//     setShowModal(false);
-//   };
 const handleSubmit = (e) => {
   e.preventDefault();
-
-  const subject = encodeURIComponent("New Trial Class Enquiry");
+   const period = formData.time.includes("AM") ? "Morning" : "Evening";
+  const subject = encodeURIComponent(`New Trial Class Enquiry - ${formData.name} | ${formData.goal} | ${period} (${formData.time})`);
 
   const body = encodeURIComponent(
 `Hi Reena,
@@ -58,6 +41,7 @@ Preferred Language: ${formData.language}`
 
   window.open(`mailto:fitsankalpwithreena@gmail.com?subject=${subject}&body=${body}`);
 
+  alert("Your email app has opened. Please click send to confirm your booking.");
   setShowModal(false);
 };
 
@@ -82,7 +66,22 @@ Preferred Language: ${formData.language}`
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <input name="name" placeholder="Your Name" onChange={handleChange} className="w-full border p-3 rounded-lg" required/>
-              <input name="age" type="text" inputMode="numeric" maxLength={3} placeholder="Your Age"
+             <div>             
+              {/* Phone Number */}  
+              <input name="phone" type="tel" inputMode="numeric" placeholder="Mobile Number" maxLength={12}
+                onChange={(e) => {
+                  e.target.value = e.target.value.replace(/\D/g, "");
+                  handleChange(e);
+                }}
+                className="w-full border p-3 rounded-lg"
+                required
+              />
+              
+              <p className="text-xs text-gray-500 mt-1">
+              We’ll contact you on this number to confirm your trial class
+            </p>
+          </div>
+             <input name="age" type="text" inputMode="numeric" maxLength={3} placeholder="Your Age"
                     onChange={(e) => {
                   e.target.value = e.target.value.replace(/\D/g, "").slice(0, 3);
                   handleChange(e);
@@ -126,8 +125,8 @@ Preferred Language: ${formData.language}`
                 <option value="Hindi">Hindi</option>
                 <option value="English">English</option>
               </select>
-                <p className="text-sm text-gray-500 text-center">
-                You’ll be redirected to WhatsApp to confirm your booking 📲
+              <p className="text-sm text-gray-500 text-center">
+                You’ll be redirected to your email app to send your booking request 📩
               </p>
               <button className="block w-full bg-orange-700 text-white  py-3 rounded-lg hover:bg-orange-500 cursor-pointer">
                 Submit

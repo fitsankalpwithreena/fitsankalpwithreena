@@ -25,7 +25,9 @@ export default function Home({ openTrial }) {
           </p>
          
           <button  
-          onClick={openTrial}
+          onClick={() => {
+          document.getElementById("classes")?.scrollIntoView({ behavior: "smooth" });
+            }}
           className="bg-orange-700 px-6 py-3 rounded-xl text-lg hover:bg-orange-500 transition cursor-pointer">
             Start Your Journey
           </button>

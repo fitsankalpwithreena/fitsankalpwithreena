@@ -1,4 +1,5 @@
 import React from "react";
+const phone = import.meta.env.VITE_PHONE_NUMBER;
 
  export default function Classes({ openTrial }) {
   return (
@@ -24,16 +25,17 @@ import React from "react";
           <li>✔ Improves flexibility</li>
           <li>✔ Builds confidence</li>
         </ul>
-        <a
-    href="https://wa.me/918208920622?text=Hi%20Reena,%20I%20am%20interested%20in%20Beginner%20Yoga."
-    target="_blank"
-  >
+      <a
+      href={`https://wa.me/${phone}?text=Hi%20Reena,%20I%20am%20interested%20in%20Beginner%20Yoga.`}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
     <button className="bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-500 cursor-pointer">
-      Join Now
+      Join Now  
     </button>
   </a>
       </div>
-
+    
       {/* Class 2 */}
       <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
         <h4 className="text-2xl font-semibold mb-2">Stress Relief Yoga</h4>
@@ -47,7 +49,7 @@ import React from "react";
           <li>✔ Calms the mind</li>
         </ul>
         <a
-    href="https://wa.me/918208920622?text=Hi%20Reena,%20I%20am%20interested%20in%20Stress%20Relief%20Yoga."
+    href={`https://wa.me/${phone}?text=Hi%20Reena,%20I%20am%20interested%20in%20Stress%20Relief%20Yoga.`}
     target="_blank"
   >
     <button className="bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-500 cursor-pointer">
@@ -69,7 +71,7 @@ import React from "react";
           <li>✔ Improves energy levels</li>
         </ul>
          <a
-    href="https://wa.me/918208920622?text=Hi%20Reena,%20I%20am%20interested%20in%20Women's%20Wellness%20Yoga."
+    href={`https://wa.me/${phone}?text=Hi%20Reena,%20I%20am%20interested%20in%20Women's%20Wellness%20Yoga.`}
     target="_blank"
   >
     <button className="bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-500 cursor-pointer">
@@ -89,7 +91,7 @@ import React from "react";
   </ul>
 
   <a
-    href="https://wa.me/918208920622?text=Hi%20Reena,%20I%20am%20interested%20in%20Weight%20Management%20Yoga."
+    href={`https://wa.me/${phone}?text=Hi%20Reena,%20I%20am%20interested%20in%20Weight%20Management%20Yoga.`}
     target="_blank"
   >
     <button className="bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-500 cursor-pointer">
@@ -108,7 +110,7 @@ import React from "react";
     <li>✔ Improves posture</li>
   </ul>
   <a
-    href="https://wa.me/918208920622?text=Hi%20Reena,%20I%20am%20interested%20in%20Corporate%20Yoga."
+    href={`https://wa.me/${phone}?text=Hi%20Reena,%20I%20am%20interested%20in%20Corporate%20Yoga.`}
     target="_blank"
   >
     <button className="bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-500 cursor-pointer">
@@ -136,7 +138,7 @@ import React from "react";
       onClick={openTrial}
       className="bg-orange-700 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-orange-500 transition cursor-pointer"
     >
-      📲 Book Free Trial on WhatsApp
+    Confirm your booking via Email 📩 
     </button>
 
   </div>
