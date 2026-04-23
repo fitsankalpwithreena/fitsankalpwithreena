@@ -1,5 +1,5 @@
 import React from "react";
-const phone = import.meta.env.VITE_PHONE_NUMBER;
+// const phone = import.meta.env.VITE_PHONE_NUMBER;
 
  export default function Contact() {
   return (
@@ -16,7 +16,7 @@ const phone = import.meta.env.VITE_PHONE_NUMBER;
 
       {/* WhatsApp */}
       <a
-        href={`https://wa.me/${phone}`}
+        href={`https://wa.me/918208920622`}
         target="_blank"
         className="bg-green-500 text-white px-6 py-3 rounded-full"
       >

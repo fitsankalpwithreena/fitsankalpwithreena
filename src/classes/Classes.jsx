@@ -1,5 +1,5 @@
 import React from "react";
-const phone = import.meta.env.VITE_PHONE_NUMBER;
+// const phone = import.meta.env.VITE_PHONE_NUMBER;
 
  export default function Classes({ openTrial }) {
   return (
@@ -26,7 +26,7 @@ const phone = import.meta.env.VITE_PHONE_NUMBER;
           <li>✔ Builds confidence</li>
         </ul>
       <a
-      href={`https://wa.me/${phone}?text=Hi%20Reena,%20I%20am%20interested%20in%20Beginner%20Yoga.`}
+      href={`https://wa.me/918208920622?text=Hi%20Reena,%20I%20am%20interested%20in%20Beginner%20Yoga.`}
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -49,7 +49,7 @@ const phone = import.meta.env.VITE_PHONE_NUMBER;
           <li>✔ Calms the mind</li>
         </ul>
         <a
-    href={`https://wa.me/${phone}?text=Hi%20Reena,%20I%20am%20interested%20in%20Stress%20Relief%20Yoga.`}
+    href={`https://wa.me/918208920622?text=Hi%20Reena,%20I%20am%20interested%20in%20Stress%20Relief%20Yoga.`}
     target="_blank"
   >
     <button className="bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-500 cursor-pointer">
@@ -71,7 +71,7 @@ const phone = import.meta.env.VITE_PHONE_NUMBER;
           <li>✔ Improves energy levels</li>
         </ul>
          <a
-    href={`https://wa.me/${phone}?text=Hi%20Reena,%20I%20am%20interested%20in%20Women's%20Wellness%20Yoga.`}
+    href={`https://wa.me/918208920622?text=Hi%20Reena,%20I%20am%20interested%20in%20Women's%20Wellness%20Yoga.`}
     target="_blank"
   >
     <button className="bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-500 cursor-pointer">
@@ -91,7 +91,7 @@ const phone = import.meta.env.VITE_PHONE_NUMBER;
   </ul>
 
   <a
-    href={`https://wa.me/${phone}?text=Hi%20Reena,%20I%20am%20interested%20in%20Weight%20Management%20Yoga.`}
+    href={`https://wa.me/918208920622?text=Hi%20Reena,%20I%20am%20interested%20in%20Weight%20Management%20Yoga.`}
     target="_blank"
   >
     <button className="bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-500 cursor-pointer">
@@ -110,7 +110,7 @@ const phone = import.meta.env.VITE_PHONE_NUMBER;
     <li>✔ Improves posture</li>
   </ul>
   <a
-    href={`https://wa.me/${phone}?text=Hi%20Reena,%20I%20am%20interested%20in%20Corporate%20Yoga.`}
+    href={`https://wa.me/918208920622?text=Hi%20Reena,%20I%20am%20interested%20in%20Corporate%20Yoga.`}
     target="_blank"
   >
     <button className="bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-500 cursor-pointer">
