@@ -42,8 +42,6 @@ Preferred Language: ${formData.language}`
   );
 
   window.open(`mailto:fitsankalpwithreena@gmail.com?subject=${subject}&body=${body}`);
-
-  alert("Your email app has opened. Please click send to confirm your booking.");
   setShowModal(false);
 };
 
